@@ -1,37 +1,64 @@
-import "./sidebar.css"
+import { Link } from "react-router-dom";
+import "./sidebar.css";
 
-export default function SideBar() {
+export default function Sidebar() {
   return (
-    <div className="sideBar">
-      <div className="sideBarItem">
-        <span className="sideBarTitle">ABOUT ME</span>
-        <img src="https://avatars.githubusercontent.com/u/90297144?v=4" alt=""></img>
+    <div className="sidebar">
+      <div className="sidebarItem">
+        <span className="sidebarTitle">ABOUT ME</span>
+        <img
+          src="https://media5.bollywoodhungama.in/wp-content/uploads/2021/04/BLACKPINKs-Lisa-to-make-her-solo-debut-in-June-2021-.jpg"
+          alt=""
+        />
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit dolores 
+          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
+          amet ex esse.Sunt eu ut nostrud id quis proident.
         </p>
       </div>
-      <div className="sideBarItem">
-        <span className="sideBarTitle">CATEGORIES</span>
-            <ul className="sideBarList">
-                <li className="sideBarListItem">Life</li>
-                <li className="sideBarListItem">Music</li>
-                <li className="sideBarListItem">Style</li>
-                <li className="sideBarListItem">Sport</li>
-                <li className="sideBarListItem">Tech</li>
-                <li className="sideBarListItem">Cinema</li>
-            </ul>
-
+      <div className="sidebarItem">
+        <span className="sidebarTitle">CATEGORIES</span>
+        <ul className="sidebarList">
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Life">
+              Life
+            </Link>
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Music">
+              Music
+            </Link>
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Sport">
+              Sport
+            </Link>
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Style">
+              Style
+            </Link>
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Tech">
+              Tech
+            </Link>
+          </li>
+          <li className="sidebarListItem">
+            <Link className="link" to="/posts?cat=Cinema">
+              Cinema
+            </Link>
+          </li>
+        </ul>
       </div>
-      <div className="sideBarItem">
-        <span className="sideBarTitle">FOLLOW US</span>
-        <div className="sideBarSocial">
-            <i class="sideBarIcon fa-brands fa-facebook"></i>
-            <i class="sideBarIcon fa-brands fa-twitter"></i>
-            <i class="sideBarIcon fa-brands fa-pinterest"></i>
-            <i class="sideBarIcon fa-brands fa-instagram"></i>
-
+      <div className="sidebarItem">
+        <span className="sidebarTitle">FOLLOW US</span>
+        <div className="sidebarSocial">
+          <i className="sidebarIcon fab fa-facebook-square"></i>
+          <i className="sidebarIcon fab fa-instagram-square"></i>
+          <i className="sidebarIcon fab fa-pinterest-square"></i>
+          <i className="sidebarIcon fab fa-twitter-square"></i>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,25 +1,41 @@
-import React from 'react'
-import "./post.css"
+import { Link } from "react-router-dom";
+import "./post.css";
 
-export default function Post() {
+export default function Post({img}) {
   return (
-    <div className='post'>
-        <img className='postImg' src='https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_1280.jpg' alt=''></img>
-        <div className='postInfo'>
-            <div className="postCats">
-                <span className="postCat">Music</span>
-                <span className="postCat">Life</span>
-            </div>
-            <span className='postTitle'>
-                Lorem ipsum, dolor sit amet
-            </span>
-            <hr/>
-            <span className='postDate'>1 hour ago</span>
+    <div className="post">
+      <img
+        className="postImg"
+        src={img}
+        alt=""
+      />
+      <div className="postInfo">
+        <div className="postCats">
+          <span className="postCat">
+            <Link className="link" to="/posts?cat=Music">
+              Music
+            </Link>
+          </span>
+          <span className="postCat">
+            <Link className="link" to="/posts?cat=Music">
+              Life
+            </Link>
+          </span>
         </div>
-        <p className='postDesc'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat exercitationem, labore illum autem necessitatibus iure eveniet magni, officia consequatur adipisci similique nisi libero. Exercitationem atque consequatur saepe pariatur officiis accusantium.
-        </p>
-      
+        <span className="postTitle">
+          <Link to="/post/abc" className="link">
+            Lorem ipsum dolor sit amet
+          </Link>
+        </span>
+        <hr />
+        <span className="postDate">1 hour ago</span>
+      </div>
+      <p className="postDesc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
+        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
+        atque, exercitationem quibusdam, reiciendis odio laboriosam?
+      </p>
     </div>
-  )
+  );
 }

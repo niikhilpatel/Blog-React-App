@@ -8,7 +8,7 @@ export default function Header(){
                 <span className="headerTitlesSm">React & Node</span>
                 <span className="headerTitlesLg"> Blog</span>
             </div>
-            <img className="headerImg" src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt=""></img>
+            <img className="headerImg" src="https://www.color-meanings.com/wp-content/uploads/small-emperor-moth-1536x1024.jpeg" alt=""></img>
 
         </div>
     )
